@@ -1,13 +1,12 @@
-version: '3'
+version: '3.9'
 
 services:
   api_dev:
     image: akaaua/api-ts-course
+    build: .
     ports: 
       - "5000:3050"
-    links:
-      - link-db
-  link-db:
+  db:
     image: mongo:latest
     ports:
       - "27017:27017"
