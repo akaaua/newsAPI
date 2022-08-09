@@ -2,6 +2,12 @@
 
 Is an API made following the Udemy Criando API's RESTful utilizando TypeScript, Node.js, mongo course to learn about RESTful API's and advance in backend development.
 
+## Deploy
+
+To deploy this project on your own docker you should use these commands:
+
+docker-compose build
+docker-compose up
 
 ## Objectives
 
