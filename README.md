@@ -7,6 +7,7 @@ Is an API made following the Udemy Criando API's RESTful utilizando TypeScript, 
 To deploy this project on your own docker you should use these commands:
 
 docker-compose build
+
 docker-compose up
 
 ## Objectives
