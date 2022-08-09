@@ -5,7 +5,6 @@ import * as HttpStatus from "http-status";
 
 class NewsController {
   get(req, res) {
-    console.log("NewsController-get all news")
     NewsService.get()
       .then((news) => Helper.sendResponse(res, HttpStatus.OK, news))
       .catch((error) => console.error.bind(console, `Error ${error}`));
