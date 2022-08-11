@@ -3,6 +3,7 @@ import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import Database from "./infra/db";
 import NewsController from "./controller/newsController";
+import auth from "./infra/auth";
 
 class StartUp {
   public app: express.Application;
@@ -33,9 +34,12 @@ class StartUp {
   }
 
   routes() {
+    
     this.app.route("/").get((req, res) => {
       res.send({ versao: "0.0.1" });
     });
+
+    this.app.use(auth.validate);
 
     this.app.route("/api/v1/news").get(NewsController.get);
     this.app.route("/api/v1/news").post(NewsController.create);
